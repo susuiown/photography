@@ -1,0 +1,96 @@
+.main_scroll {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main_scroll .inner {
+  display: flex;
+  height: 100%;
+  margin: 0 16px;
+}
+
+.main_scroll .itm {
+  flex: 0 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_scroll .itm figure {
+  width: 100%;
+  height: 600px;
+  margin: 0;
+  overflow: hidden;
+  margin-right: 16px;
+}
+
+.main_scroll .itm img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#footer {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  bottom: 0;
+  height: 80px;
+  /* background: #fff; */
+}
+
+#footer .inner {
+  position: relative;
+  height: 80px;
+}
+
+#footer .inner span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 14px;
+  color: #a9a9a9;
+}
+
+/* 반응형: 모바일 화면 (최대 768px) */
+@media (max-width: 768px) {
+  .main_scroll {
+    height: auto;
+    overflow: visible;
+  }
+
+  .main_scroll .inner {
+    display: block;
+    margin: 0 16px;
+    margin-top: 96px;
+  }
+
+  .main_scroll .itm {
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  .main_scroll .itm figure {
+    height: auto;
+    margin-right: 0;
+  }
+
+  .main_scroll .itm img {
+    height: auto;
+  }
+
+  /* 푸터 높이 보정 */
+  #footer {
+    position: static;
+    height: 80px;
+  }
+
+  #footer .inner {
+    height: 80px;
+  }
+}
